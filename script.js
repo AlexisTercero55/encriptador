@@ -1,4 +1,7 @@
-
+// Alexis Tercero
+// Alura Challenge 1 : Logica de programacion.
+// Encriptador y desencriptador de texto.
+//----------------------------------------------------
 /* Reglas de encriptación: 
 "e" es convertido para "enter" 
 "i" es convertido para "imes"
@@ -8,6 +11,28 @@
 Solo letras minusculas
 No se permite acentuación de palabras 
 */
+let encodingRule = {
+    'a' : 'ai',
+    'e' : 'enter',
+    'i' : 'imes',
+    'o' : 'ober',
+    'u' : 'ufat'
+}
+
+// function to encrypt a string
+// using the encoding rule
+function encrypt(string) 
+{   // methodology: loops and conditionals.
+    let encryptedString = '';
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] in encodingRule) {
+            encryptedString += encodingRule[string[i]];
+        } else {
+            encryptedString += string[i];
+        }
+    }
+    return encryptedString;
+}
 
 /* Reglas de desencriptación: 
 "enter" es convertido para "e" 
@@ -18,3 +43,76 @@ No se permite acentuación de palabras
 Solo letras minusculas
 No se permite acentuación de palabras   
 */
+let decodingRule = {
+    'enter' : 'e',
+    'imes' : 'i',
+    'ai' : 'a',
+    'ober' : 'o',
+    'ufat' : 'u'
+}
+
+// function to decrypt a string
+// using the decoding rule as regex pattern with global flag
+// this function is able to encrypt and decrypt strings
+// depending on the rules of encoding.
+function decrypt(string, rules) 
+{
+    // methodology: iterations , regex and built-in functions.
+    //get an array of encoding rules as regex
+    let regexRules = Object.keys(rules).map(function(key) {
+        return new RegExp(key, 'g');
+    });
+
+    // get an array with yhe rules values
+    let valueRules = Object.values(rules);
+
+    //replace the string with the decoding rules values
+    //string = string.replace(regexRules[0], valueRules[0]);
+    // do for each encoding rule
+    for (let i = 0; i < regexRules.length; i++)
+    {
+        string = string.replace(regexRules[i], valueRules[i]);
+    }
+    return string; // return the decrypted string
+}
+
+//----------------------------------------------------
+// test the functions to encrypt and decrypt strings
+// ----- test aproved -----
+// a = encrypt('alexis tercero', encodingRule);
+// console.log('alexis : ' + a);
+// console.log(a + ' : ' + decrypt(a, decodingRule));
+//----------------------------------------------------
+
+// ---------- interaction with the user ----------
+// Call the functions depending on the user.
+// event for calling the encryptor function
+function callEncryptor(event) 
+{
+    // skipt the reload of the page
+    event.preventDefault();
+    // get the user input
+    let string = document.querySelector('.string').value;
+    // encrypt the string
+    let encryptedString = encrypt(string);
+    // show the encrypted string
+    console.log(encryptedString);
+    document.querySelector('.output').value = encryptedString;
+}
+// event for calling the decryptor function
+function callDecryptor(event) 
+{
+    // skipt the reload of the page
+    event.preventDefault();
+    // get the user input
+    let string = document.querySelector('.string').value;
+    // decrypt the string
+    let decryptedString = decrypt(string, decodingRule);
+    // show the decrypted string
+    console.log(decryptedString);
+    document.querySelector('.output').value = decryptedString;
+}
+
+// Event listeners
+document.getElementById('btn-encriptar').addEventListener('click', callEncryptor);
+document.getElementById('btn-desencriptar').addEventListener('click', callDecryptor);

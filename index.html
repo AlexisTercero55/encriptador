@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <meta author="Alexis Tercero">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Encriptador</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1 class="titulo">código secreto</h1>
+  <h1 class="titulo">Encriptador : Alura Challenge 1</h1>
 
   <main class="main">
     <section class="form box">
       <form action="">
         <label for="input-texto">Solo letras minúsculas, sin acento</label>
-        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
+        <!-- id 'string' is used for callbacks -->
+        <input class="string" type="text" name="input-texto" id="textbox" placeholder="Ingrese el texto aqui">
+
         <input class="btn" type="submit" value="encriptar!" id="btn-encriptar">
+
         <input class="btn" type="submit" value="desencriptar!" id="btn-desencriptar">
       </form>
     </section>
   
     <section class="msg box">
       <h2 id="">Mensaje encriptada:</h2>
-      <input class="text-input" type="text" id="msg"></input>
+      <input class="output" type="text" id="textbox"></input>
       <input class="btn" type="submit" value="copiar" id="btn-copy">
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>
