@@ -1,0 +1,48 @@
+Intrucciones:
+https://www.aluracursos.com/challenges/oracle-one/semana01y02-construye-un-encriptador-texto-con-javascript
+
+Video: 
+https://www.youtube.com/watch?v=hA3fXw-X-8c&t=1425s
+
+Usar Trello para gestion de proyecto:
+    Targeta de reglas.
+    Lista de tareas.
+    plantilla.
+
+    save as copy named "challen1geLogicaProgramacion" 
+
+Objetivo del challenge:
+
+    Realizar una aplicacion web para encriptar y
+    desencriptar texto.
+
+        ver Trello.
+
+    Personalizar aplicacion.
+
+    Subir a GitHub pages.
+
+--------------------------------------------------------------------------------
+Tenemos un periodo de tiempo de dos semanas para desarrollar 
+el proyecto y vamos a trabajar con el sistema ágil de 
+desarrollo, utilizando el Trello de la siguiente forma: 
+
+1. La columna **Listos para iniciar** presenta las tarjetas 
+con elementos que aun no fueron desarrollados.
+
+2. En la columna **En Desarrollo** estarán los elementos 
+que estés desarrollando en el momento. Al iniciar una tarea, 
+podrás mover la tarjeta que contiene dicha tarea para esta 
+columna.
+
+3. En la columna **Pausado** estarán los elementos que 
+comenzaste a desarrollar, pero necesitaste parar por algún 
+motivo.
+
+4. Por fin, en la columna **Concluido** estarán los 
+elementos ya concluidos.
+
+El Trello es una herramienta de uso individual para que puedas controlar el progreso de tus actividades, pero no será evaluada.
+
+Buen proyecto!
+
