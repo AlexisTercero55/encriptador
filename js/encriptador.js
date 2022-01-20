@@ -83,36 +83,3 @@ function decrypt(string, rules)
 // console.log('alexis : ' + a);
 // console.log(a + ' : ' + decrypt(a, decodingRule));
 //----------------------------------------------------
-
-// ---------- interaction with the user ----------
-// Call the functions depending on the user.
-// event for calling the encryptor function
-function callEncryptor(event) 
-{
-    // skipt the reload of the page
-    event.preventDefault();
-    // get the user input
-    let string = document.querySelector('.string').value;
-    // encrypt the string
-    let encryptedString = encrypt(string);
-    // show the encrypted string
-    console.log(encryptedString);
-    document.querySelector('.output').value = encryptedString;
-}
-// event for calling the decryptor function
-function callDecryptor(event) 
-{
-    // skipt the reload of the page
-    event.preventDefault();
-    // get the user input
-    let string = document.querySelector('.string').value;
-    // decrypt the string
-    let decryptedString = decrypt(string, decodingRule);
-    // show the decrypted string
-    console.log(decryptedString);
-    document.querySelector('.output').value = decryptedString;
-}
-
-// Event listeners
-document.getElementById('btn-encriptar').addEventListener('click', callEncryptor);
-document.getElementById('btn-desencriptar').addEventListener('click', callDecryptor);
