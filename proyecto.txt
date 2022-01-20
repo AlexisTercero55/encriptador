@@ -13,25 +13,25 @@ son las siguientes:
 
 Requisitos:
 
-    - Debe funcionar solo con letras minúsculas
-    
-    - No deben ser utilizados letras con acentos 
-    ni caracteres especiales
+  - Debe funcionar solo con letras minúsculas
+  
+  - No deben ser utilizados letras con acentos 
+  ni caracteres especiales
 
-    - Debe ser posible convertir una palabra para la 
-    versión encriptada también devolver una palabra 
-    encriptada para su versión original.
+  - Debe ser posible convertir una palabra para la 
+  versión encriptada también devolver una palabra 
+  encriptada para su versión original.
 
-    Por ejemplo:
-    "gato" => "gaitober"
-    "gaitober" => "gato"
+  Por ejemplo:
+  "gato" => "gaitober"
+  "gaitober" => "gato"
 
-    - La página debe tener campos para
-      inserción del texto que será encriptado o 
-      desencriptado, y el usuario debe poder escoger 
-      entre as dos opciones.
+  - La página debe tener campos para
+    inserción del texto que será encriptado o 
+    desencriptado, y el usuario debe poder escoger 
+    entre as dos opciones.
 
-    - El resultado debe ser mostrado en la pantalla.
+  - El resultado debe ser mostrado en la pantalla.
 
 **Extras:**
 - Un botón que copie el texto encriptado/desencriptado 
@@ -53,5 +53,32 @@ Elementos principales de la página
 
 ---------- javascript ---------------------------------
 
-Escribir una funcion para encriptación de texto.
+Escribir funcionalidades para encriptación de texto.
+
+Gestionar interacción entre los elementos de la página
+mediante interacción con el usuario.
+
+Vease carpeta `js` para más detalles.
+
+Conceptos utilizados:
+
+Expreciones regulares:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+
+  Exprecion regular para una busqueda global:
+    
+    let rule = new RegExp(pattern, 'g')
+
+
+Interaccion con el portapapeles:
+
+  navigator.clipboard //API
+
+  navigator.clipboard writes and reads 
+  arbitrary data to and from the clipboard.
+
+  metodos para copiar y pegar:
+
+    navigator.clipboard.readText() // copiar
+    navigator.clipboard.writeText() // pegar
 

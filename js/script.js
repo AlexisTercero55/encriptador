@@ -6,7 +6,6 @@
 // funtion to write the string in the output element
 function output(string)
 {
-    document.querySelector('.output').value = '';
     document.querySelector('.output').value = string;
 }
 
@@ -41,3 +40,22 @@ function callDecryptor(event)
 // Event listeners
 document.getElementById('btn-encriptar').addEventListener('click', callEncryptor);
 document.getElementById('btn-desencriptar').addEventListener('click', callDecryptor);
+
+// ------ clear the inputs elements ------
+
+// function to clear the input element chosen by any selector
+function clearInput(selector)
+{
+    document.querySelector(selector).value = '';
+}
+
+// set up the event listener for the buttons input and output
+document.querySelector("#btn-clear-input").addEventListener("click", function(event) {
+    event.preventDefault();
+    clearInput('.string');
+});
+document.querySelector("#btn-clear-output").addEventListener("click", function(event) {
+    event.preventDefault();
+    clearInput('.output');
+});
+

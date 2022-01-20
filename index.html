@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="js/encriptador.js" defer></script>
   <script src="js/script.js" defer></script>
+  <script src="js/clipboard.js" defer ></script>
 </head>
 <body>
   <h1 class="titulo">Encriptador : Alura Challenge 1</h1>
@@ -20,9 +21,12 @@
         <!-- id 'string' is used for callbacks -->
         <input class="string" type="text" name="input-texto" id="textbox" placeholder="Ingrese el texto aqui">
 
-        <input class="btn" type="submit" value="encriptar!" id="btn-encriptar">
+        <input class="btn" type="submit" value="encriptar" id="btn-encriptar">
 
-        <input class="btn" type="submit" value="desencriptar!" id="btn-desencriptar">
+        <input class="btn" type="submit" value="desencriptar" id="btn-desencriptar">
+
+        <!-- add button to clear input text-->
+        <input class="btn" type="submit" value="limpiar" id="btn-clear-input">
       </form>
     </section>
   
@@ -30,6 +34,7 @@
       <h2 id="">Mensaje encriptada:</h2>
       <input class="output" type="text" id="textbox"></input>
       <input class="btn" type="submit" value="copiar" id="btn-copy">
+      <input class="btn" type="submit" value="limpiar" id="btn-clear-output">
     </section>
   </main>
 

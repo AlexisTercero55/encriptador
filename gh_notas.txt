@@ -1,0 +1,166 @@
+// Alexis Tercero
+---------- Notas de GitHub ----------
+
+Inicializar un repositorio Git:
+
+    $ git init
+
+agragar archivos al stage:
+
+    $ git add <nombre_archivo>
+
+    agragar todos los archivos:
+
+    $ git add .
+
+Agregar archivos al repositorio mediante 
+un commit:
+
+    $ git commit -m "mensaje"
+
+Some git concepts:
+
+    HEAD: Estado actual de nuestro código, 
+    es decir, donde nos colocó Git
+
+    Working tree: Lugar donde los archivos 
+    realmente están siendo almacenados
+
+    index: Lugar donde Git almacena lo que 
+    será commiteado, es decir, la ubicación 
+    entre el working tree y el repositorio 
+    de Git en sí.
+
+Repositorio remoto (servidor Git)
+creamos un repositorio que no tendrá 
+la working tree, o sea, no 
+contendrá una copia de nuestros archivos:
+
+    $ git init --bare
+
+Crear un link de nuestro repositorio local 
+con el repositorio remoto (servidor Git):
+
+    $ git remote add serverName <serverPath>
+
+Clonar un repositorio remoto:
+
+    $ git clone <serverPath> repoName (si no se pone nombre, se usa el nombre del repositorio remoto)
+
+Actualizar el servidor remoto:
+    
+    $ git push serverName <branchName>
+
+Extraer una rama del servidor remoto:
+
+    $ git pull serverName <branchName>
+
+Servidores online (GitHub):
+
+1. agragar el repositorio remoto:
+
+    $ git remote add origin https://github.com/user/repo.git
+
+2.1. Extraer datos:
+
+    $ git push origin <branchName> 
+
+2.2. Agregar datos:
+
+    $ git pull origin <branchName>
+
+--------- Uso de ramas -----------------
+
+Create a branch:
+
+    $ git branch <branchName>
+
+Change to a branch:
+
+    $ git checkout <branchName>
+
+Create a new branch and switch to it:
+
+    $ git checkout -b <branchName>
+
+Merge a branch into the current branch:
+
+    $ git merge <branchName>
+
+Rebase a branch:
+
+    $ git rebase <branchName>
+
+Rebasing a branch is the same as merging it,
+but the result is a new commit that is 
+based on the current branch.
+
+merge vs rebase:
+
+    To read:
+    https://medium.datadriveninvestor.com/git-rebase-vs-merge-cc5199edd77c
+
+ctrl + z en git:
+
+¿Cuáles comandos, respectivamente, 
+deshacen modificaciones antes de agregarlas 
+(1), después de agregarlas, 
+pero antes de commitearlas (2), 
+y después de realizar el commit (3)?
+
+    1 - git restore
+
+    2 - git restore --staged
+
+    3 - git revert
+
+Guardando para despues
+    
+    $ git stash
+
+    $ git stash pop // para recuperar y borrar del la lista de stash
+
+    $ git stash list
+
+Navegacion entre commits:
+
+    $ git checkout <commitHash>
+
+    $ git checkout <branchName> <commitHash>
+
+En esta aula aprendimos:
+
+Que Git puede ayudarnos a deshacer cambios que no vamos a utilizar;
+Que, para deshacer un cambio antes de agregarlo para commit(con git add), podemos usar el comando git restore <archivos>;
+Que, para deshacer un cambio después de agregarlo paracommit, primero debemos ejecutar git restore --staged <archivos> y luego podemos deshacerlos con git restore <files>;
+Que, para revertir los cambios realizados en un commit, el comando git revert puede ser la solución;
+Que el comando git revert genera un nuevo commit informando que los cambios fueron deshechos;
+Que, para guardar un trabajo y reanudarlo más tarde, podemos usar git stash;
+Que, para ver qué cambios hay en el stash, podemos usar el comando git stash list;
+Que, con el comando git stash apply <número>, podemos aplicar un cambio específico al stash;
+Que el comando git stash drop <número> elimina un elemento determinado del stash;
+Que el comando git stash pop aplica y elimina el último cambio que se agregó alstash;
+Que git checkout sirve para dejar la copia del código de muestra aplicación en el estado que queremos:
+git checkout <branch> deja el código en el estado de una branchcon el nombre <branch>;
+git checkout <hash> deja el código en el estado de commit con el hash <hash>.
+
+Checar diferencias entre commits:
+
+    $ git diff <commitHash>..<commitHash>
+
+    $ git diff <commitHash> <commitHash>
+
+Definicion de un lanzamiento de version:
+
+    $ git tag -a <tagName(v0.1.0)> <commitHash> -m "mensaje"      
+
+Enciar tag al servidor remoto:
+
+    $ git push origin <tagName>
+
+--- Secuence to update gh-pages branch from master branch:
+
+    $ git checkout gh-pages
+    $ git rebase master
+    $ git push origin gh-pages
+    $ git checkout master // return to master branch
