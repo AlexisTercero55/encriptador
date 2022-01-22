@@ -1,53 +1,233 @@
-* {
-  margin: 0;
-  padding: 0;
+*{ /*remove margins and paddings */
   box-sizing: border-box;
+  margin: 0;
+  padding:0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 body {
-  background-color: lightgray;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #FFD400;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif;*/ 
+  /*font-family: 'Lato', sans-serif;*/
+  color: rgb(0, 0, 0);
+}
+
+.banner{
+  background-color: #ca0606;
+  height: 13vh;
+  width: 100%;
+  /* width: 100%;
+  height: auto;
+  padding: 20px; */
+}
+
+.f{
+  float: left;
+  padding: 30px;
+}
+
+#logo{
+  width: 35%;
+}
+
+#title{
+  width: 65%;
+  color: #FFD400;
+  margin-top: 5px;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+
+
+
+.titulo {
+  background-color: #CCAA00;
+  color: #7C0ACC;
+  padding: 15px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;  
 }
 
 .main {
-  width: 80vw;
+  background-color: #9B0DFF;
+  color: #FFD400;
+  max-width: 90%;
+  min-width: 50%;
+  width: auto;
+  height: 400px;
+  padding: 20px;
   margin: auto;
   display: flex;
   justify-content: center;
-}
-
-.titulo {
-  padding: 15px;
-  width: 30vw;
-  margin: auto;
-
+  border-radius: 30px;
 }
 
 .box {
-  padding: 10px;
+  background-color: #7012B3;
+  border-radius: 30px;
+  padding: 20px;
   margin: 0 10px 0 10px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  border-radius: 0.5em;
-  width: 30vw;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
   height: auto;
+  text-align: center;
+}
+
+.box .anim{
+  margin-top: 50px;
+  align-content: center;
+  width: 100%;
+  font-family: 'Consolas', 'monaco', monospace;
+  font-size: 18px;
+  /* bold font */
+  font-weight: bold;
+  
 }
 
 .btn {
-  border: 0;
+  background-color: #9B0DFF;
+  height: 50px;
+  width: 90px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #FFD400;
+  margin-top: 10px;
+  margin-right: 10px;
+  /* border: 0;
   color: white;
   font-weight: bold;
   background-color: blue;
   padding: 10px;
   margin-top: 10px;
   border-radius: 0.5em;
+  border: 5px solid rgb(214, 228, 18); */
 }
 
 #textbox {
+  background-color: #FFD400;
+  width: 100%;
+  height: 50px;
   border-radius: 0.5em;
+  padding: 0.5em;
+  /* border-radius: 0.5em;
   border: 1px solid rgba(0, 0, 0, 0.2);
   display: block;
   padding: 0.5em;
   width: 100%;
   height: 50px;
+  color: blue;
+  border: 5px solid rgb(228, 144, 18);
+  background-color: rgb(0, 0, 0); */
 }
+
+.label {
+  color: #FFD400; 
+  font-weight: bold;
+  width: 100%;
+  /* height: 0px; */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer
+{
+  background-color: #333331;
+  color: #FFD400;
+  width: 100%;
+  height: 200px;
+  position:absolute;
+  bottom:0;
+  
+  /* width: 100%;
+  height: auto;
+  padding: 20px; */
+}
+.footer .container{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  padding: 0px 10px;
+}
+
+.footer .container .fbox
+{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+/*centrar una imagen*/
+.footer .container .fbox figure
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .footer .container .fbox
+{
+  float: left;
+  width: 45%;
+  height: 160px;
+  border: #ca0606 solid 1px;
+  align-items: center;
+} */
+
+.me
+{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.icons
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon
+{
+  float: left;
+}
+.imgi
+{
+  margin: 20px;
+}
+
+
+
+
+/* * {/* remove margins and paddings
+
+.f{
+  float: left;
+  padding: 20px;
+  border: 2px solid red;
+}
+
+
+.reto{
+  /*aling text to center 
+  text-align: center;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+
+/*
+
+
+
+
