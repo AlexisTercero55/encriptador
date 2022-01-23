@@ -83,3 +83,4 @@ Interaccion con el portapapeles:
     navigator.clipboard.readText() // copiar
     navigator.clipboard.writeText() // pegar
 
+

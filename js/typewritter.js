@@ -1,23 +1,6 @@
-// function typeWriter() {
-    
-//     console.log(i);
-//   if (i < txt.length) {
-//     //   if(txt.charAt(i)=='2'){
-//     //       document.getElementById("demo").innerHTML += "<br>";
-//     //   }else{
-//         document.getElementById("demo").innerHTML += txt.charAt(i);
-//     //   }
-        
-//     i++;
-//     setTimeout(typeWriter, speed);
-//   }
-//   else 
-//   {
-//         i=0;
-//         document.getElementById("demo").innerHTML = "";
-//         typeWriter();
-//   }
-// }
+// Alexis Tercero
+// Alura Challenge 1 : Logica de programacion.
+// typewritter animation.
 
 // get #demo element
 var anim = document.getElementById("demo");
@@ -34,7 +17,6 @@ function typeWriter()
         } else {
             document.getElementById("demo").innerHTML += txt.charAt(i);
         }
-      //document.getElementById("demo").innerHTML += txt.charAt(i);
       i++;
       setTimeout(typeWriter, speed);
     }
@@ -50,10 +32,3 @@ function typeWriter()
 window.addEventListener("load", function() {
     typeWriter();
 });
-
-  
-
-
-// let txt = 'felicidades por enfrentar este desafio y haberlo <br> concluido con exito';
-// let speed = 50;
-
